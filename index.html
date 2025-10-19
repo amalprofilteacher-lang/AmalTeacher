@@ -7,90 +7,70 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-/* ====== Design System ====== */
 :root{
-  --bg:#fff8fb;            /* page background */
-  --card:#ffffff;          /* surface */
-  --ink:#222;              /* main text */
-  --muted:#6b6b6b;         /* secondary text */
-  --brand:#9f2f56;         /* brand */
-  --brand-2:#e7bacb;       /* accent line */
-  --line:#f1cfda;          /* separators */
-  /* Spacing scale (8pt) */
-  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px;
-  /* Container */
-  --w: 1040px;
-  /* Shadows */
-  --shadow: 0 6px 20px rgba(0,0,0,.06);
+  --bg:#fff7fa; --card:#ffffff; --ink:#222; --muted:#666;
+  --brand:#a7355a; --brand-2:#e6b6c6; --line:#f0c9d6;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cairo',sans-serif}
 a{color:var(--brand);text-decoration:none}
-.container{max-width:var(--w);margin:0 auto;padding:0 var(--s5)}
-h1,h2,h3{line-height:1.25;letter-spacing:.2px}
-/* Fluid typography */
-h1{font-size:clamp(26px,2.6vw,36px)}
-h2{font-size:clamp(16px,1.8vw,20px)}
-h3{font-size:clamp(18px,2vw,22px)}
-p{font-size:clamp(15px,1.6vw,17px)}
+.container{max-width:1100px;margin:0 auto;padding:0 18px}
 
-/* ====== Topbar ====== */
+/* Topbar (clean & sticky) */
 .topbar{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px solid var(--line)}
-.topbar .row{display:grid;grid-template-columns:1fr auto auto;gap:var(--s4);align-items:center;padding:var(--s3) 0}
-.brand{font-weight:800;color:#6b243d}
-.menu{display:flex;gap:var(--s4);justify-content:center}
-.menu a{font-weight:700;color:#6b243d}
+.topbar .row{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:10px 0}
+.brand{font-weight:800;color:#7a2f48}
+.menu{display:flex;gap:14px;justify-content:center}
+.menu a{font-weight:700;color:#7a2f48}
 .lang-switch button{background:var(--brand);color:#fff;border:none;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer}
 .lang-switch .secondary{background:#fff;color:var(--brand);border:1px solid var(--brand)}
 
-/* ====== Hero (Cover) ====== */
-.hero{background:linear-gradient(145deg,#f6d6e2,#ffe9ef); padding:var(--s7) 0}
-.hero-grid{display:grid;grid-template-columns:1.6fr .8fr;gap:var(--s5);align-items:stretch}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:var(--s5)}
-.hero-main .tag{display:inline-block;background:#fff;border:1px solid var(--line);color:#7a2f48;padding:6px 12px;border-radius:999px;font-weight:700;margin-bottom:var(--s3)}
-.hero-main .quote{margin:var(--s3) 0 var(--s5);color:#5b1f33}
-.cta{display:flex;gap:var(--s3);flex-wrap:wrap}
+/* Header (Hero) — organized card layout */
+.hero{background:linear-gradient(145deg,#f7d7e2,#ffe8ee); padding:42px 0}
+.hero-grid{display:grid;grid-template-columns:2fr 1fr;gap:22px;align-items:stretch}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.05);padding:22px}
+.hero-main h1{margin:0 0 6px;font-size:34px;color:#5b1f33}
+.hero-main h2{margin:0 0 12px;font-size:18px;color:#7a2f48}
+.tag{display:inline-block;background:#fff;border:1px solid var(--line);color:#7a2f48;padding:6px 12px;border-radius:999px;font-weight:700;margin-bottom:10px}
+.quote{margin:10px 0 18px;color:#5b1f33}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
 .btn{background:var(--brand);color:#fff;border:none;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
 .btn.secondary{background:#fff;color:var(--brand);border:1px solid var(--brand)}
-.hero-side{text-align:center;display:flex;flex-direction:column;justify-content:center;gap:var(--s3)}
+.hero-side{text-align:center;display:flex;flex-direction:column;justify-content:center;gap:10px}
 .hero-side img{width:140px;align-self:center;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.15)}
 .hero-side .note{color:var(--muted)}
 
-/* ====== Sections ====== */
-section{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);
-  padding:var(--s6);margin:var(--s6) auto}
-section h3{margin-top:0;color:#7a2f48;border-right:6px solid var(--brand-2);padding-right:10px}
-.lead{line-height:1.95;margin:var(--s3) 0 var(--s2)}
+/* Sections */
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.04);padding:28px;margin:26px auto}
+section h3{margin-top:0;color:#7a2f48;border-right:6px solid var(--brand-2);
+  padding-right:10px}
+.lead{font-size:18px;line-height:1.9}
 .muted{color:var(--muted)}
 
-/* ====== Gallery with consistent aspect ratio ====== */
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s4)}
-.gallery .ph{position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
-.gallery .ph::before{content:\"\";display:block;padding-top:68%} /* 3:2 ratio */
-.gallery img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
-.gallery .ph:hover img{transform:scale(1.03)}
+/* Grids */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.gallery img{width:100%;border-radius:12px;border:1px solid var(--line);
+  box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .25s ease}
+.gallery img:hover{transform:scale(1.03)}
+.videos{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+video{width:340px;max-width:100%;border-radius:12px;border:1px solid var(--line);
+  box-shadow:0 6px 18px rgba(0,0,0,.05)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.skill{background:#fff7fb;border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+.skill i{color:var(--brand);font-size:28px;margin-bottom:6px}
 
-/* ====== Videos as tidy cards ====== */
-.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--s4)}
-.video-card{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:var(--s4)}
-.video-card video{width:100%;border-radius:8px}
-
-/* ====== Skills ====== */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s4)}
-.skill{background:#fff7fb;border:1px solid var(--line);border-radius:12px;padding:var(--s4);text-align:center}
-.skill i{color:var(--brand);font-size:26px;margin-bottom:6px}
-
-/* ====== Footer ====== */
-footer{background:#f6d6e2;border-top:1px solid var(--line);text-align:center;padding:var(--s5);color:#5b1f33;font-weight:700}
+/* Footer */
+footer{background:#f7d7e2;border-top:1px solid var(--line);text-align:center;padding:18px;color:#5b1f33;font-weight:700}
 footer .en{font-family:'Poppins',sans-serif;font-weight:500;color:#444}
 
-/* ====== No-mix bilingual ====== */
+/* Language visibility (no mixing) */
 .lang-ar [data-en], .lang-en [data-ar]{display:none}
 .lang-en{direction:ltr;font-family:'Poppins',sans-serif}
 .lang-en section h3{border-right:none;border-left:6px solid var(--brand-2);padding-left:10px}
 
-/* ====== Responsive ====== */
-@media (max-width:980px){ .hero-grid{grid-template-columns:1fr} .menu{display:none} .hero{padding:var(--s6) 0} }
+/* Responsive */
+@media(max-width:960px){ .hero-grid{grid-template-columns:1fr} .menu{display:none} }
 </style>
 </head>
 <body class="lang-ar">
@@ -112,12 +92,12 @@ footer .en{font-family:'Poppins',sans-serif;font-weight:500;color:#444}
     </div>
     <div class="lang-switch">
       <button class="secondary" id="to-ar">العربية</button>
-      <button id="to-en">English</button>
+      <button class="" id="to-en">English</button>
     </div>
   </div>
 </div>
 
-<!-- Hero -->
+<!-- Organized Header (Hero) -->
 <header class="hero">
   <div class="container hero-grid">
     <div class="card hero-main">
@@ -130,14 +110,14 @@ footer .en{font-family:'Poppins',sans-serif;font-weight:500;color:#444}
       <p class="quote" data-ar>التعليم شغف يُنير العقول</p>
       <p class="quote" data-en>Teaching is a passion that lights up minds.</p>
       <div class="cta">
-        <a class="btn" href="#gallery" data-ar>شاهد الأعمال</a>
-        <a class="btn" href="#gallery" data-en>View Work</a>
-        <a class="btn secondary" href="#about" data-ar>نبذة</a>
-        <a class="btn secondary" href="#about" data-en>About</a>
+        <a class="btn" href="#gallery" data-ar>شاهد الأعمال والصور</a>
+        <a class="btn" href="#gallery" data-en>View Work & Photos</a>
+        <a class="btn secondary" href="#about" data-ar>نبذة مختصرة</a>
+        <a class="btn secondary" href="#about" data-en>About Me</a>
       </div>
     </div>
     <div class="card hero-side">
-      <img src="AmalTeacher_QR.png" onerror="this.onerror=null;this.src='Amal_Profile_QR.png';" alt="QR">
+      <img src="AmalTeacher_QR.png" alt="QR">
       <div class="note" data-ar>امسح الرمز لفتح الموقع من الجوال</div>
       <div class="note" data-en>Scan the code to open on mobile</div>
     </div>
@@ -149,15 +129,15 @@ footer .en{font-family:'Poppins',sans-serif;font-weight:500;color:#444}
 <section id="about">
   <h3 data-ar><i class="fa-solid fa-book-open"></i> نبذة تعريفية</h3>
   <h3 data-en><i class="fa-solid fa-book-open"></i> About</h3>
-  <p class="lead" data-ar>معلمة متخصصة في مرحلة الصفوف الأولى، أؤمن بأن التأسيس المتين في القراءة والكتابة هو حجر الأساس في رحلة التعلم. أركز على أساليب ممتعة وتفاعلية تُنمي حب التعلم وتبني الثقة لدى الأطفال.</p>
-  <p class="lead" data-en>I focus on building strong literacy and numeracy foundations through joyful, interactive methods that nurture confidence and a love of learning.</p>
+  <p class="lead" data-ar>معلمة متخصصة في مرحلة الصفوف الأولى، أؤمن بأن التأسيس المتين في القراءة والكتابة هو حجر الأساس في رحلة التعلم. أحرص على أساليب ممتعة وتفاعلية تُنمي حب التعلم وتبني الثقة لدى الأطفال.</p>
+  <p class="lead" data-en>I am an early primary teacher focused on building strong foundations in literacy and numeracy through joyful, interactive methods that grow children’s confidence and love for learning.</p>
 </section>
 
 <section id="philosophy">
   <h3 data-ar><i class="fa-solid fa-lightbulb"></i> فلسفتي التعليمية</h3>
   <h3 data-en><i class="fa-solid fa-lightbulb"></i> Teaching Philosophy</h3>
-  <p class="lead" data-ar>البيئة الصفية الإيجابية أساس النجاح الأكاديمي والنفسي. التدرّج، التكرار الذكي، والتطبيق العملي تصنع تعلّمًا عميقًا مستمرًا.</p>
-  <p class="lead" data-en>A positive classroom is the base for academic and emotional success. Gradual scaffolding, smart repetition, and hands‑on practice create deep, lasting learning.</p>
+  <p class="lead" data-ar>البيئة الصفية الإيجابية أساس النجاح الأكاديمي والنفسي. التدرّج، التكرار الذكي، والتطبيق العملي هي مفاتيحي لصناعة تعلّم عميق ومستمر.</p>
+  <p class="lead" data-en>A positive classroom environment is the key to academic and emotional success. Gradual scaffolding, smart repetition, and hands‑on practice create deep, lasting learning.</p>
 </section>
 
 <section id="gallery">
@@ -188,7 +168,7 @@ footer .en{font-family:'Poppins',sans-serif;font-weight:500;color:#444}
   <h3 data-ar><i class="fa-solid fa-chalkboard-user"></i> مهاراتي</h3>
   <h3 data-en><i class="fa-solid fa-chalkboard-user"></i> Skills</h3>
   <div class="skills">
-    <div class="skill"><i class="fa-solid fa-pen-nib"></i><h4 data-ar>القراءة والكتابة</h4><h4 data-en>Literacy</h4><p data-ar>تأسيس متين بأساليب مبسطة.</p><p data-en>Solid foundations with clear techniques.</p></div>
+    <div class="skill"><i class="fa-solid fa-pen-nib"></i><h4 data-ar>القراءة والكتابة</h4><h4 data-en>Literacy</h4><p data-ar>تأسيس متين بأساليب مبسطة.</p><p data-en>Solid foundations through clear techniques.</p></div>
     <div class="skill"><i class="fa-solid fa-children"></i><h4 data-ar>التفاعل الصفي</h4><h4 data-en>Class Interaction</h4><p data-ar>تعلم ممتع وتعاوني.</p><p data-en>Joyful, cooperative learning.</p></div>
     <div class="skill"><i class="fa-solid fa-brain"></i><h4 data-ar>التفكير والإبداع</h4><h4 data-en>Thinking & Creativity</h4><p data-ar>تنمية التفكير العميق والإبداع.</p><p data-en>Developing deep thinking and creativity.</p></div>
     <div class="skill"><i class="fa-solid fa-heart"></i><h4 data-ar>البيئة الإيجابية</h4><h4 data-en>Positive Environment</h4><p data-ar>أمان، تشجيع، وثقة.</p><p data-en>Safety, encouragement, and trust.</p></div>
@@ -200,7 +180,7 @@ footer .en{font-family:'Poppins',sans-serif;font-weight:500;color:#444}
   <h3 data-en><i class="fa-solid fa-envelope"></i> Contact</h3>
   <p data-ar></p>
   <p data-en class="en">Created & Designed by Teacher Amal Al‑Fuhaid</p>
-  <img src="AmalTeacher_QR.png" onerror="this.onerror=null;this.src='Amal_Profile_QR.png';" alt="QR" style="width:120px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.15)">
+  <img src="AmalTeacher_QR.png" alt="QR" style="width:120px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.15)">
 </section>
 
 </main>
@@ -213,10 +193,10 @@ footer .en{font-family:'Poppins',sans-serif;font-weight:500;color:#444}
 </footer>
 
 <script>
-// Language Toggle
-const root=document.body;
-document.getElementById('to-ar').onclick=()=>{root.classList.add('lang-ar');root.classList.remove('lang-en');window.scrollTo({top:0,behavior:'smooth'});};
-document.getElementById('to-en').onclick=()=>{root.classList.add('lang-en');root.classList.remove('lang-ar');window.scrollTo({top:0,behavior:'smooth'});};
+// Language Toggle — no mixing
+const root = document.body;
+document.getElementById('to-ar').onclick = ()=>{ root.classList.add('lang-ar'); root.classList.remove('lang-en'); };
+document.getElementById('to-en').onclick = ()=>{ root.classList.add('lang-en'); root.classList.remove('lang-ar'); };
 </script>
 </body>
 </html>
