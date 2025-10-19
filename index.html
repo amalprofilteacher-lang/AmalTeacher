@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>الملف التعريفي | المعلمة أمل منصور محمد آل فهيد</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --bg:#fff7fa; --card:#ffffff; --ink:#222; --muted:#666;
+  --brand:#a7355a; --brand-2:#e6b6c6; --line:#f0c9d6;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cairo',sans-serif}
+a{color:var(--brand);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 18px}
+
+/* Topbar (clean & sticky) */
+.topbar{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px solid var(--line)}
+.topbar .row{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:10px 0}
+.brand{font-weight:800;color:#7a2f48}
+.menu{display:flex;gap:14px;justify-content:center}
+.menu a{font-weight:700;color:#7a2f48}
+.lang-switch button{background:var(--brand);color:#fff;border:none;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer}
+.lang-switch .secondary{background:#fff;color:var(--brand);border:1px solid var(--brand)}
+
+/* Header (Hero) — organized card layout */
+.hero{background:linear-gradient(145deg,#f7d7e2,#ffe8ee); padding:42px 0}
+.hero-grid{display:grid;grid-template-columns:2fr 1fr;gap:22px;align-items:stretch}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.05);padding:22px}
+.hero-main h1{margin:0 0 6px;font-size:34px;color:#5b1f33}
+.hero-main h2{margin:0 0 12px;font-size:18px;color:#7a2f48}
+.tag{display:inline-block;background:#fff;border:1px solid var(--line);color:#7a2f48;padding:6px 12px;border-radius:999px;font-weight:700;margin-bottom:10px}
+.quote{margin:10px 0 18px;color:#5b1f33}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--brand);color:#fff;border:none;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+.btn.secondary{background:#fff;color:var(--brand);border:1px solid var(--brand)}
+.hero-side{text-align:center;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.hero-side img{width:140px;align-self:center;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.hero-side .note{color:var(--muted)}
+
+/* Sections */
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.04);padding:28px;margin:26px auto}
+section h3{margin-top:0;color:#7a2f48;border-right:6px solid var(--brand-2);
+  padding-right:10px}
+.lead{font-size:18px;line-height:1.9}
+.muted{color:var(--muted)}
+
+/* Grids */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.gallery img{width:100%;border-radius:12px;border:1px solid var(--line);
+  box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .25s ease}
+.gallery img:hover{transform:scale(1.03)}
+.videos{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+video{width:340px;max-width:100%;border-radius:12px;border:1px solid var(--line);
+  box-shadow:0 6px 18px rgba(0,0,0,.05)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.skill{background:#fff7fb;border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+.skill i{color:var(--brand);font-size:28px;margin-bottom:6px}
+
+/* Footer */
+footer{background:#f7d7e2;border-top:1px solid var(--line);text-align:center;padding:18px;color:#5b1f33;font-weight:700}
+footer .en{font-family:'Poppins',sans-serif;font-weight:500;color:#444}
+
+/* Language visibility (no mixing) */
+.lang-ar [data-en], .lang-en [data-ar]{display:none}
+.lang-en{direction:ltr;font-family:'Poppins',sans-serif}
+.lang-en section h3{border-right:none;border-left:6px solid var(--brand-2);padding-left:10px}
+
+/* Responsive */
+@media(max-width:960px){ .hero-grid{grid-template-columns:1fr} .menu{display:none} }
+</style>
+</head>
+<body class="lang-ar">
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="container row">
+    <div class="brand">
+      <span data-ar>المعلمة أمل آل فهيد</span>
+      <span data-en>Teacher Amal Al‑Fuhaid</span>
+    </div>
+    <div class="menu">
+      <a href="#about" data-ar>نبذة</a><a href="#about" data-en>About</a>
+      <a href="#philosophy" data-ar>فلسفتي</a><a href="#philosophy" data-en>Philosophy</a>
+      <a href="#gallery" data-ar>الصور</a><a href="#gallery" data-en>Gallery</a>
+      <a href="#videos" data-ar>الفيديو</a><a href="#videos" data-en>Videos</a>
+      <a href="#skills" data-ar>مهاراتي</a><a href="#skills" data-en>Skills</a>
+      <a href="#contact" data-ar>تواصل</a><a href="#contact" data-en>Contact</a>
+    </div>
+    <div class="lang-switch">
+      <button class="secondary" id="to-ar">العربية</button>
+      <button class="" id="to-en">English</button>
+    </div>
+  </div>
+</div>
+
+<!-- Organized Header (Hero) -->
+<header class="hero">
+  <div class="container hero-grid">
+    <div class="card hero-main">
+      <span class="tag" data-ar>الملف التعريفي</span>
+      <span class="tag" data-en>Teaching Portfolio</span>
+      <h1 data-ar>المعلمة أمل منصور محمد آل فهيد</h1>
+      <h1 data-en>Teacher Amal Al‑Fuhaid</h1>
+      <h2 data-ar>معلمة مرحلة الصفوف الأولى</h2>
+      <h2 data-en>Early Primary Teacher</h2>
+      <p class="quote" data-ar>التعليم شغف يُنير العقول</p>
+      <p class="quote" data-en>Teaching is a passion that lights up minds.</p>
+      <div class="cta">
+        <a class="btn" href="#gallery" data-ar>شاهد الأعمال والصور</a>
+        <a class="btn" href="#gallery" data-en>View Work & Photos</a>
+        <a class="btn secondary" href="#about" data-ar>نبذة مختصرة</a>
+        <a class="btn secondary" href="#about" data-en>About Me</a>
+      </div>
+    </div>
+    <div class="card hero-side">
+      <img src="Amal_Profile_QR.png" alt="QR">
+      <div class="note" data-ar>امسحي الرمز لفتح الموقع من الجوال</div>
+      <div class="note" data-en>Scan the code to open on mobile</div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<section id="about">
+  <h3 data-ar><i class="fa-solid fa-book-open"></i> نبذة تعريفية</h3>
+  <h3 data-en><i class="fa-solid fa-book-open"></i> About</h3>
+  <p class="lead" data-ar>معلمة متخصصة في مرحلة الصفوف الأولى، أؤمن بأن التأسيس المتين في القراءة والكتابة هو حجر الأساس في رحلة التعلم. أحرص على أساليب ممتعة وتفاعلية تُنمي حب التعلم وتبني الثقة لدى الأطفال.</p>
+  <p class="lead" data-en>I am an early primary teacher focused on building strong foundations in literacy and numeracy through joyful, interactive methods that grow children’s confidence and love for learning.</p>
+</section>
+
+<section id="philosophy">
+  <h3 data-ar><i class="fa-solid fa-lightbulb"></i> فلسفتي التعليمية</h3>
+  <h3 data-en><i class="fa-solid fa-lightbulb"></i> Teaching Philosophy</h3>
+  <p class="lead" data-ar>البيئة الصفية الإيجابية أساس النجاح الأكاديمي والنفسي. التدرّج، التكرار الذكي، والتطبيق العملي هي مفاتيحي لصناعة تعلّم عميق ومستمر.</p>
+  <p class="lead" data-en>A positive classroom environment is the key to academic and emotional success. Gradual scaffolding, smart repetition, and hands‑on practice create deep, lasting learning.</p>
+</section>
+
+<section id="gallery">
+  <h3 data-ar><i class="fa-solid fa-image"></i> معرض الصور</h3>
+  <h3 data-en><i class="fa-solid fa-image"></i> Gallery</h3>
+  <div class="gallery">
+    <img src="WhatsApp Image 2025-10-18 at 2.31.06 PM.jpeg" alt="work 1">
+    <img src="WhatsApp Image 2025-10-18 at 2.31.07 PM.jpeg" alt="work 2">
+    <img src="WhatsApp Image 2025-10-18 at 2.31.07 PM (1).jpeg" alt="work 3">
+    <img src="WhatsApp Image 2025-10-18 at 2.31.07 PM (2).jpeg" alt="work 4">
+    <img src="WhatsApp Image 2025-10-18 at 2.31.08 PM.jpeg" alt="work 5">
+    <img src="WhatsApp Image 2025-10-18 at 2.31.08 PM (1).jpeg" alt="work 6">
+    <img src="WhatsApp Image 2025-10-18 at 2.31.08 PM (2).jpeg" alt="work 7">
+  </div>
+</section>
+
+<section id="videos">
+  <h3 data-ar><i class="fa-solid fa-video"></i> الفيديوهات</h3>
+  <h3 data-en><i class="fa-solid fa-video"></i> Videos</h3>
+  <div class="videos">
+    <video controls src="IMG_8494.MP4"></video>
+    <video controls src="IMG_8495.MP4"></video>
+    <video controls src="IMG_4041.MP4"></video>
+  </div>
+</section>
+
+<section id="skills">
+  <h3 data-ar><i class="fa-solid fa-chalkboard-user"></i> مهاراتي</h3>
+  <h3 data-en><i class="fa-solid fa-chalkboard-user"></i> Skills</h3>
+  <div class="skills">
+    <div class="skill"><i class="fa-solid fa-pen-nib"></i><h4 data-ar>القراءة والكتابة</h4><h4 data-en>Literacy</h4><p data-ar>تأسيس متين بأساليب مبسطة.</p><p data-en>Solid foundations through clear techniques.</p></div>
+    <div class="skill"><i class="fa-solid fa-children"></i><h4 data-ar>التفاعل الصفي</h4><h4 data-en>Class Interaction</h4><p data-ar>تعلم ممتع وتعاوني.</p><p data-en>Joyful, cooperative learning.</p></div>
+    <div class="skill"><i class="fa-solid fa-brain"></i><h4 data-ar>التفكير والإبداع</h4><h4 data-en>Thinking & Creativity</h4><p data-ar>تنمية التفكير العميق والإبداع.</p><p data-en>Developing deep thinking and creativity.</p></div>
+    <div class="skill"><i class="fa-solid fa-heart"></i><h4 data-ar>البيئة الإيجابية</h4><h4 data-en>Positive Environment</h4><p data-ar>أمان، تشجيع، وثقة.</p><p data-en>Safety, encouragement, and trust.</p></div>
+  </div>
+</section>
+
+<section id="contact" style="text-align:center">
+  <h3 data-ar><i class="fa-solid fa-envelope"></i> تواصل</h3>
+  <h3 data-en><i class="fa-solid fa-envelope"></i> Contact</h3>
+  <p data-ar>✨ إعداد وتصميم الملف من قِبل المعلمة أمل آل فهيد ✨</p>
+  <p data-en class="en">Created & Designed by Teacher Amal Al‑Fuhaid</p>
+  <img src="Amal_Profile_QR.png" alt="QR" style="width:120px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.15)">
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div data-ar>© جميع الحقوق محفوظة | المعلمة أمل آل فهيد</div>
+    <div data-en class="en">© All rights reserved | Teacher Amal Al‑Fuhaid</div>
+  </div>
+</footer>
+
+<script>
+// Language Toggle — no mixing
+const root = document.body;
+document.getElementById('to-ar').onclick = ()=>{ root.classList.add('lang-ar'); root.classList.remove('lang-en'); };
+document.getElementById('to-en').onclick = ()=>{ root.classList.add('lang-en'); root.classList.remove('lang-ar'); };
+</script>
+</body>
+</html>
